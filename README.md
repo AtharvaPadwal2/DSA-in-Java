@@ -1,42 +1,81 @@
 # DSA in Java ☕
 
-A structured journey through **Data Structures and Algorithms using Java**—built one problem, one concept and one commit at a time.
+A personal repository documenting my journey of learning **Data Structures and Algorithms using Java**.
 
-## 🎯 Goals
+The goal is simple: practise consistently, understand the logic behind every solution, and gradually progress from Java fundamentals to advanced DSA.
 
-* Strengthen Java fundamentals
-* Master essential data structures
-* Understand algorithms and complexity
-* Solve 3–4 problems consistently
-* Document clean, readable solutions
+## Current Progress
 
-## 📚 Progress
+### Java Basics
 
-* [x] Java syntax and fundamentals
-* [x] Variables, input and conditions
-* [x] Loops and basic programs
-* [ ] Methods, arrays and strings
-* [ ] Searching and sorting
-* [ ] Linked lists, stacks and queues
-* [ ] Trees, graphs and dynamic programming
+* Hello World and basic syntax
+* User input with `Scanner`
+* Conditional statements
+* Loops
+* Largest of three numbers
+* Leap-year checker
+* Calculator using `switch`
+* Counting digits
+* Reversing a number
+* Palindrome checker
+* Factorial calculation
+* Fibonacci series
 
-## 🗂️ Repository Structure
+## Repository Structure
 
-Each topic has its own folder containing practice programs, explanations and problem solutions.
-
-Every solution will include:
-
-```java
-// Time Complexity: O(...)
-// Space Complexity: O(...)
+```text
+DSA-in-Java/
+├── java_basics/
+│   ├── LargestNumber.java
+│   ├── LeapYear.java
+│   ├── SimpleCalculator.java
+│   ├── CountDigits.java
+│   ├── ReverseNumber.java
+│   ├── Palindrome.java
+│   ├── Factorial.java
+│   └── FibonacciSeries.java
+└── README.md
 ```
 
-## 🚀 The Journey
+## How to Run a Program
 
-This repository will grow alongside my DSA skills—from printing **Hello World** to solving advanced algorithmic problems.
+Compile the Java file:
 
-> Consistency over intensity. Progress over perfection.
+```bash
+javac FileName.java
+```
+
+Run the compiled program:
+
+```bash
+java FileName
+```
+
+Example:
+
+```bash
+javac FibonacciSeries.java
+java FibonacciSeries
+```
+
+## Learning Roadmap
+
+* Java fundamentals
+* Time and space complexity
+* Arrays and strings
+* Searching and sorting
+* Recursion and backtracking
+* Linked lists
+* Stacks and queues
+* Trees and binary search trees
+* Heaps and hash maps
+* Graphs
+* Dynamic programming
+
+## Progress Philosophy
+
+This repository is not about uploading perfect solutions from day one. It represents consistent learning—solving problems, finding edge cases, improving approaches, and becoming a better programmer one commit at a time.
 
 ---
 
-**Created by [Atharva Padwal](https://github.com/AtharvaPadwal2)**
+Built with consistency and curiosity by **[Atharva Padwal](https://github.com/AtharvaPadwal2)**.
