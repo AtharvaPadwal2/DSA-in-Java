@@ -2,29 +2,64 @@
 
 A personal repository documenting my journey of learning **Data Structures and Algorithms using Java**.
 
-The goal is simple: practise consistently, understand the logic behind every solution, and gradually progress from Java fundamentals to advanced DSA.
+The goal is simple: **practice consistently, understand the logic behind every solution, analyze time and space complexity, and gradually progress from Java fundamentals to advanced DSA.**
 
-## Current Progress
+## 📌 Current Progress
 
-### Java Basics
+### ☕ Java Basics
 
 * Hello World and basic syntax
-* User input with `Scanner`
+* Variables and data types
+* User input using `Scanner`
 * Conditional statements
+* `switch` statements
 * Loops
+* Methods
+* Method overloading
 * Largest of three numbers
 * Leap-year checker
-* Calculator using `switch`
+* Simple calculator
 * Counting digits
 * Reversing a number
 * Palindrome checker
 * Factorial calculation
 * Fibonacci series
+* Prime number checking using methods
 
-## Repository Structure
+### 📦 Arrays
+
+* Array creation and user input
+* Array traversal
+* Forward and backward traversal
+* Sum and average of elements
+* Minimum and maximum elements
+* Linear search
+* Counting occurrences of an element
+* In-place array reversal
+* Two-pointer technique
+* Finding the second-largest distinct element
+
+### ⏱️ Complexity Analysis
+
+For each problem, I am gradually practicing how to identify:
+
+* Time complexity
+* Space complexity
+* Auxiliary space
+* Best, average, and worst cases
+* Differences between multiple approaches
+
+Examples covered so far include:
+
+* **O(1)** — constant-time operations
+* **O(n)** — array traversal and linear search
+* **O(1) auxiliary space** — in-place array reversal
+
+## 📁 Repository Structure
 
 ```text
 DSA-in-Java/
+│
 ├── java_basics/
 │   ├── LargestNumber.java
 │   ├── LeapYear.java
@@ -33,11 +68,24 @@ DSA-in-Java/
 │   ├── ReverseNumber.java
 │   ├── Palindrome.java
 │   ├── Factorial.java
-│   └── FibonacciSeries.java
+│   ├── FibonacciSeries.java
+│   ├── MethodOverloading.java
+│   └── PrimeUsingMethod.java
+│
+├── arrays/
+│   ├── ArrayBasics.java
+│   ├── ArrayTraverse.java
+│   ├── ArraySumandAverage.java
+│   ├── ArrayMinandMax.java
+│   ├── ArrayLinearSearch.java
+│   ├── ArrayCountOccurrences.java
+│   ├── ArrayReverse.java
+│   └── ArraySecondLargest.java
+│
 └── README.md
 ```
 
-## How to Run a Program
+## ▶️ Running a Program
 
 Compile the Java file:
 
@@ -54,27 +102,48 @@ java FileName
 Example:
 
 ```bash
-javac FibonacciSeries.java
-java FibonacciSeries
+javac ArrayReverse.java
+java ArrayReverse
 ```
 
-## Learning Roadmap
+## 🗺️ Learning Roadmap
 
-* Java fundamentals
-* Time and space complexity
-* Arrays and strings
-* Searching and sorting
-* Recursion and backtracking
-* Linked lists
-* Stacks and queues
-* Trees and binary search trees
-* Heaps and hash maps
-* Graphs
-* Dynamic programming
+* [x] Java fundamentals
+* [x] Basic time and space complexity
+* [ ] Arrays
+* [ ] Strings
+* [ ] Searching and sorting
+* [ ] Recursion
+* [ ] Backtracking
+* [ ] Linked lists
+* [ ] Stacks and queues
+* [ ] Hashing
+* [ ] Trees
+* [ ] Binary search trees
+* [ ] Heaps
+* [ ] Graphs
+* [ ] Greedy algorithms
+* [ ] Dynamic programming
 
-## Progress Philosophy
+## 🎯 Approach
 
-This repository is not about uploading perfect solutions from day one. It represents consistent learning—solving problems, finding edge cases, improving approaches, and becoming a better programmer one commit at a time.
+For each topic, the focus is on:
+
+1. Understanding the concept
+2. Writing the solution independently
+3. Testing different inputs and edge cases
+4. Understanding why the solution works
+5. Analyzing time and space complexity
+6. Improving the solution when possible
+7. Committing progress consistently
+
+## 📈 Progress Philosophy
+
+This repository is not about uploading perfect solutions from day one.
+
+It documents the actual learning process — **writing code, making mistakes, debugging, understanding edge cases, improving approaches, and gradually building stronger problem-solving skills.**
+
+> **Understand the logic. Write the code. Analyze it. Improve it. Repeat.**
 
 ---
 
