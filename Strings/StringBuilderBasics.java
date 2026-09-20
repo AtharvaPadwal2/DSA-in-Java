@@ -15,7 +15,7 @@ public class StringBuilderBasics {
           System.out.println("Invalid Input");
         } else {
         
-        sb.append("Atharva");
+        sb.append(" ");
         sb.setCharAt(1, 'a');
 
         System.out.println(sb);
