@@ -7,48 +7,38 @@ public class FirstLastOccurrenceString {
         System.out.print("Enter a string");
         String input = sc.nextLine();
 
+        System.out.print("Enter a target");
+        char target = sc.next().charAt(0);
+
         if(input.isEmpty()){
             System.out.println("Invalid Input");
         }
         else{
             input = input.toLowerCase();
+           
 
-            int[] frequency = new int[26];
+           int first = -1;
+           int last = -1;
 
-            for(int i = 0; i< input.length(); i++){
-                char ch = input.charAt(i);
-                if(Character.isLetter(ch)){
-                frequency [ch - 'a']++;
-            }
+        for(int i = 0; i < input.length(); i++) {
+              if(input.charAt(i) == target) {
+             if(first == -1) {
+                first = i;   
         }
+        last = i;        
+    }
+}
 
-        boolean found = false;
-             for(int i = 0; i < input.length(); i++) {
-                char ch = input.charAt(i);
-                if(Character.isLetter(ch) && frequency[ch - 'a'] == 1) {
-                    System.out.println("First Non-Repeating Character : " + ch);
-                    found = true;
-                    break;
-                }
-            }
-            boolean lastfound = false;
-             for(int i = input.length() - 1; i >= 0; i--) {
-                char ch = input.charAt(i);
-                if(Character.isLetter(ch) && frequency[ch - 'a'] == 1) {
-                    System.out.println("Last Non-Repeating Character : " + ch);
-                    found = true;
-                    break;
-                    
-                }
-            }
-            if(!found || !lastfound){
-                System.out.println("No repeating character found ");
-            }
+if(first == -1) {
+    System.out.println("Target not found");
+} else {
+    System.out.println("First occurrence of '" + target + "' at index: " + first);
+    System.out.println("Last occurrence of '" + target + "' at index: " + last);
+}
 
-
-
-        }
         sc.close();
     }
-    
 }
+    }
+
+
