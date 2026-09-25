@@ -15,6 +15,7 @@ public class FirstLastOccurrenceString {
         }
         else{
             input = input.toLowerCase();
+            target = Character.toLowerCase(target);
            
 
            int first = -1;
