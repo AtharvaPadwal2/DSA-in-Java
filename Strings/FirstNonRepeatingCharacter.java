@@ -15,7 +15,7 @@ public class FirstNonRepeatingCharacter {
 
             int[] frequency = new int[26];
 
-            for(int i = 0; i < input.length(); i++) {
+            for(int i = 0; i <input.length(); i++) {
                 char ch = input.charAt(i);
                 if(Character.isLetter(ch)) {
                     frequency[ch - 'a']++;
