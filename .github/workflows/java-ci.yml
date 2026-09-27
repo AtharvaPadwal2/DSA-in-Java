@@ -1,0 +1,38 @@
+name: Java CI
+
+on:
+  push:
+    branches:
+      - main
+
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  compile:
+    name: Compile Java Source
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+
+      - name: Set up Java
+        uses: actions/setup-java@v6
+        with:
+          distribution: temurin
+          java-version: '24'
+
+      - name: Display Java version
+        run: java --version
+
+      - name: Compile Java source files
+        shell: bash
+        run: |
+          mkdir -p build
+          find . -name "*.java" -not -path "./build/*" -print0 \
+            | xargs -0 javac -d build
