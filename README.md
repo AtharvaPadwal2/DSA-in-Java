@@ -29,10 +29,15 @@ The goal is simple: **practice consistently, understand the logic behind every s
 - Pattern problems
 - Method-based problem solving
 
+---
+
 ### 📦 Arrays
+
+Completed concepts and problems:
 
 - Array creation and user input
 - Array traversal
+- Forward and backward traversal
 - Sum and average of elements
 - Minimum and maximum elements
 - Linear search
@@ -40,7 +45,7 @@ The goal is simple: **practice consistently, understand the logic behind every s
 - In-place array reversal
 - Two-pointer technique
 - Finding the second-largest distinct element
-- Checking if an array is sorted
+- Checking whether an array is sorted
 - Finding duplicate elements
 - Copying arrays
 - First and last occurrence
@@ -51,8 +56,14 @@ The goal is simple: **practice consistently, understand the logic behind every s
 - Array rotation by `K` positions
 - Merging arrays
 - Finding a missing number
-- Input validation and edge-case handling
-- Array indexing and boundary management
+- Input validation
+- Boundary handling
+- Array indexing
+- Edge-case handling
+
+**Arrays: Completed ✅**
+
+---
 
 ### 🔤 Strings
 
@@ -67,10 +78,11 @@ The goal is simple: **practice consistently, understand the logic behind every s
 - Backward traversal
 - Uppercase and lowercase conversion
 - String immutability
-- `equals()` and `equalsIgnoreCase()`
+- `equals()`
+- `equalsIgnoreCase()`
 - Empty String validation
 
-#### String Problems
+#### String Manipulation
 
 - String reversal
 - Palindrome checking
@@ -81,21 +93,24 @@ The goal is simple: **practice consistently, understand the logic behind every s
 - Removing duplicate characters
 - Anagram checking
 - String compression
+- Longest word in a sentence
+- First and last character occurrence
 
-#### String Techniques
+#### Frequency Array Techniques
 
-- Character-by-character traversal
-- Frequency arrays
-- Character-to-index mapping using `ch - 'a'`
+- Fixed-size frequency arrays
+- Character-to-index mapping using:
+
+```java
+ch - 'a'
+```
+
 - Boolean arrays for duplicate tracking
-- Case-insensitive processing
-- Adjacent-character comparison
-- Building transformed Strings
-- Character classification using the `Character` class
+- Finding non-repeating characters
+- Finding unique characters
+- Comparing frequencies between Strings
 
 #### StringBuilder
-
-Currently learning:
 
 - Mutable vs immutable Strings
 - Creating a `StringBuilder`
@@ -107,17 +122,51 @@ Currently learning:
 - `length()`
 - `toString()`
 - Efficient String construction
+- Reversing a String using `StringBuilder`
+
+#### Two-Pointer String Problems
+
+- Valid palindrome using two pointers
+- Case-insensitive comparison
+- Ignoring whitespace while comparing
+- Checking whether one String is a subsequence of another
+
+#### Prefix Problems
+
+- Longest common prefix
+- Comparing multiple Strings manually
+- Character-by-character prefix matching
+- Reducing a candidate prefix
+
+#### Sliding Window
+
+Implemented the **Sliding Window technique** for:
+
+- Longest substring without repeating characters
+- Maintaining `left` and `right` pointers
+- Expanding and shrinking a window
+- Duplicate tracking inside the active window
+- Calculating window length using:
+
+```java
+right - left + 1
+```
+
+**Strings: Completed ✅**
+
+---
 
 ## 🧩 DSA Techniques Introduced
 
-The problems completed so far have introduced:
+The repository currently includes practice with:
 
 - Linear traversal
 - Reverse traversal
 - Two-pointer technique
+- Sliding window
 - Frequency arrays
-- Character-to-index mapping
 - Boolean tracking arrays
+- Character-to-index mapping
 - Counter variables
 - Accumulator variables
 - Input validation
@@ -128,13 +177,19 @@ The problems completed so far have introduced:
 - In-place operations
 - Duplicate detection
 - Frequency comparison
+- Prefix matching
 - Result construction
 - Basic run-length encoding
 - Mutable vs immutable data handling
+- Early termination using `break`
+- Sentinel values such as `-1`
+- Single-pass and multi-pass algorithms
+
+---
 
 ## ⏱️ Complexity Analysis
 
-For each problem, I am practicing how to identify:
+For each problem, I practice identifying:
 
 - Time complexity
 - Space complexity
@@ -142,7 +197,7 @@ For each problem, I am practicing how to identify:
 - Best, average, and worst cases
 - Differences between multiple approaches
 
-Examples covered so far:
+Complexities covered so far include:
 
 - **O(1)** — constant-time operations
 - **O(n)** — array traversal
@@ -154,10 +209,17 @@ Examples covered so far:
 - **O(n)** — anagram checking
 - **O(n)** — duplicate detection
 - **O(n)** — String compression traversal
-- **O(1) auxiliary space** — fixed-size frequency and boolean arrays
+- **O(n)** — two-pointer String problems
+- **O(n)** — sliding-window traversal
+- **O(n × m)** — longest common prefix across multiple Strings
+- **O(1) auxiliary space** — fixed-size frequency arrays
+- **O(1) auxiliary space** — fixed-size boolean arrays
 - **O(1) auxiliary space** — in-place array reversal
+- **O(n) result space** — building transformed Strings
 
-I am also learning how Java's **String immutability** can affect the real cost of repeated String concatenation and how `StringBuilder` can improve String construction.
+I am also learning how implementation choices affect performance, especially how repeated String concatenation differs from using `StringBuilder`.
+
+---
 
 ## 📁 Repository Structure
 
@@ -217,7 +279,20 @@ DSA-in-Java/
 │   ├── RemoveDuplicates.java
 │   ├── AnagramCheck.java
 │   ├── StringCompression.java
-│   └── StringBuilderBasics.java
+│   ├── StringBuilderBasics.java
+│   ├── ReverseUsingStringBuilder.java
+│   ├── FirstNonRepeatingCharacter.java
+│   ├── FirstLastOccurrenceString.java
+│   ├── LongestWord.java
+│   ├── ValidPalindromeTwoPointers.java
+│   ├── IsSubsequence.java
+│   ├── FirstUniqueCharacter.java
+│   ├── LongestCommonPrefix.java
+│   └── LongestSubstringWithoutRepeating.java
+│
+├── .github/
+│   └── workflows/
+│       └── java-ci.yml
 │
 ├── .gitignore
 ├── LICENSE
@@ -225,6 +300,44 @@ DSA-in-Java/
 ```
 
 > Compiled `.class` files are excluded from version control using `.gitignore`.
+
+---
+
+## ⚙️ Continuous Integration
+
+This repository uses **GitHub Actions** for basic Java CI.
+
+The workflow:
+
+```text
+Push / Pull Request
+        ↓
+Checkout Repository
+        ↓
+Set Up Java
+        ↓
+Compile Java Source Files
+        ↓
+Pass ✅ / Fail ❌
+```
+
+CI is triggered on:
+
+- Pushes to `main`
+- Pull requests targeting `main`
+
+The current workflow verifies that all Java source files compile successfully.
+
+This provides practical exposure to:
+
+- GitHub Actions
+- CI workflows
+- YAML configuration
+- Automated compilation
+- Pull request checks
+- Branch-based development
+
+---
 
 ## ▶️ Running a Program
 
@@ -249,12 +362,14 @@ java StringReverse
 
 Depending on the package and directory structure, programs may need to be compiled and executed from the repository root using their package name.
 
+---
+
 ## 🗺️ Learning Roadmap
 
 - [x] Java fundamentals
 - [x] Basic time and space complexity
 - [x] Arrays
-- [ ] Strings — **In Progress**
+- [x] Strings
 - [ ] Searching and sorting
 - [ ] Recursion
 - [ ] Backtracking
@@ -268,38 +383,43 @@ Depending on the package and directory structure, programs may need to be compil
 - [ ] Greedy algorithms
 - [ ] Dynamic programming
 
-## 🔤 Current String Roadmap
+---
 
-### Completed
+## 🔎 Next Topic — Searching & Sorting
 
-- [x] String basics
-- [x] String traversal
-- [x] Reverse String
-- [x] Palindrome String
-- [x] Character counting
-- [x] Character frequency
-- [x] Removing spaces
-- [x] Removing duplicate characters
-- [x] Anagram checking
-- [x] String compression
-- [x] Frequency-array basics
+### Searching
 
-### Currently Learning
+Planned:
 
-- [ ] `StringBuilder`
-- [ ] Efficient String construction
+- [ ] Linear Search revision
+- [ ] Binary Search
+- [ ] First occurrence using Binary Search
+- [ ] Last occurrence using Binary Search
+- [ ] Search Insert Position
+- [ ] Search in Rotated Sorted Array
 
-### Coming Next
+### Sorting
 
-- [ ] Reverse using `StringBuilder`
-- [ ] First non-repeating character
-- [ ] First and last occurrence in a String
-- [ ] Longest word
-- [ ] Two-pointer String problems
-- [ ] Hashing with Strings
-- [ ] Sliding-window technique
-- [ ] Longest substring without repeating characters
-- [ ] More String-based DSA problems
+Planned:
+
+- [ ] Bubble Sort
+- [ ] Selection Sort
+- [ ] Insertion Sort
+- [ ] Merge Sort
+- [ ] Quick Sort
+
+The main focus will be understanding the difference between:
+
+```text
+O(n)
+O(log n)
+O(n²)
+O(n log n)
+```
+
+and learning when each searching or sorting approach is appropriate.
+
+---
 
 ## 🎯 Approach
 
@@ -313,6 +433,10 @@ For each topic, the focus is on:
 6. Improving the solution when possible
 7. Learning reusable DSA patterns
 8. Committing progress consistently
+9. Using branches and pull requests where appropriate
+10. Running automated CI checks
+
+---
 
 ## 📈 Progress Philosophy
 
